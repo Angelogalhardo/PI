@@ -1,0 +1,18 @@
+<ion-content class="background">
+  <ion-card>
+    <ion-card-content>
+      <form (ngForm)='formLogar'>
+      <ion-list no-line>
+        <ion-item>
+          <ion-input type="text" placeholder="Nome de Usuário" name="usuario" [(ngModel)]="usuario.nomeUsuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Senha" name= "password" [(ngModel)]="usuario.senha"></ion-input>
+        </ion-item>
+          <button ion-button block outline color="light" (click)="inicio()">Entrar</button>
+      </ion-list>
+       </form>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button (click)="cadastro();" class="bottom" ion-button clear full color="light">Não possui uma conta? Clique aqui</button>
+</ion-content>

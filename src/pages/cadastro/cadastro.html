@@ -1,0 +1,51 @@
+
+<ion-content class="background">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+   <form (ngForm)='formCadastrar'>
+    <ion-list no-line>
+     <ion-item>
+      <ion-input type="text" placeholder="Nome de Usuário" name="usuario" [(ngModel)]="usuario.nomeUsuario"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-input type="password" placeholder="Senha" name="password" [(ngModel)]="usuario.senha"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-input type="E-mail" placeholder=" E-mail" name=" E-mail" [(ngModel)]="usuario.email"></ion-input>
+     </ion-item>
+     <ion-item>
+      <label>Sexo</label>
+      <div><br />
+       <input type="radio" name="sexo" value="M" [(ngModel)]="usuario.sexo">
+       <label for="genderChoice1">Masculino</label>
+
+       <input type="radio" name="sexo" value="F" [(ngModel)]="usuario.sexo">
+       <label for="genderChoice2">Ferminino</label>
+
+       <input type="radio" name="sexo" value="O" [(ngModel)]="usuario.sexo">
+       <label for="genderChoice2">Outros</label>
+      </div>
+     </ion-item>
+     <ion-item>
+      <label>Você possui CNH ?</label>
+      <div><br />
+       <input type="radio" name="motorista" value=1 [(ngModel)]="usuario.motorista">
+       <label for="genderChoice1">Sim</label>
+
+       <input type="radio" name="motorista" value=0 [(ngModel)]="usuario.motorista">
+       <label for="genderChoice2">Não</label>
+      </div>
+     </ion-item>
+    </ion-list>
+    <button ion-button color="light" clear (click)="cadastrar();" (click)="homecadastrar();" >Cadastrar-se</button>
+   </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

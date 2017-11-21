@@ -1,0 +1,28 @@
+
+<ion-content class="background">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+  <ion-card>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+   <form (ngForm)='formCadastrar'>
+    <ion-list no-line>
+     <ion-item>
+      <ion-input type="text" placeholder="Local de partida" name="usuario" [(ngModel)]="carona.localDeSaida"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-input type="text" placeholder="Local de destino" name="password" [(ngModel)]="carona.LocalDeChegada"></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-input type="number" placeholder=" Lugares disponivel" name=" E-mail" [(ngModel)]="carona.email"></ion-input>
+     </ion-item>
+    </ion-list>
+    <button ion-button color="light" clear (click)="cadastrarCarona();" (click)="homecadastrar();">Cadastrar</button>
+   </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
